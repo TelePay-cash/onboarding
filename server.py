@@ -64,6 +64,19 @@ if __name__ == '__main__':
     PORT = 23
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Enable the TCP keepalive mechanism
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+
+    # Set the idle time before keepalives are sent
+    server.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPIDLE, 60)
+
+    # Set the interval between keepalive probes
+    server.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPINTVL, 10)
+
+    # Set the number of unacknowledged probes before the connection is considered dead
+    server.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPCNT, 3)
+    
     server.bind((HOST, PORT))
     server.listen()
     print("TCP server started on port", PORT)
