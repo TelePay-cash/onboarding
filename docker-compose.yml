@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  demo:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    ports:
+      - 23:23
+    restart: always
