@@ -60,7 +60,7 @@ def format_python(code):
 
 if __name__ == '__main__':
 
-    HOST = "0.0.0.0"
+    HOST = "telepay.cash"
     PORT = 23
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
