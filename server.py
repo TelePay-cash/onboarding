@@ -84,17 +84,6 @@ if __name__ == '__main__':
                 "\n"
                 "Welcome to TelePay!\n\n"
                 "Ready to receive crypto payments?\n\n"
-                "Before we start this demo, check that your device is connected to internet.",
-                animate=True
-            )
-            pause(client)
-
-            # slide 2
-            clear(client)
-            lolcat(client,  "assets/telepay.logo.txt")
-            output(
-                client,
-                "\n"
                 "In this demo, you will learn how to receive crypto payments using TelePay.\n\n"
                 "First, you will need to create a merchant.\n\n"
                 "Go to https://telepay.cash/addMerchant, create a merchant, go to the Developers section inside your dashboard and copy the private API key.\n",
